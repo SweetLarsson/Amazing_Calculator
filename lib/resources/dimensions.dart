@@ -1,11 +1,13 @@
 
 class MyDimensions {
+  static const double d0_5 = 0.5;
   static const double d1 = 1.0;
   static const double d1_5 = 1.5;
   static const double d2 = 2.0;
   static const double d3 = 3.0;
   static const double d4 = 4.0;
   static const double d5 = 5.0;
+  static const double d5_5 = 5.5;
   static const double d6 = 6.0;
   static const double d7 = 7.0;
   static const double d8 = 8.0;
