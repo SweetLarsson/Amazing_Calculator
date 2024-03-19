@@ -22,7 +22,7 @@ class AppPages {
       binding: SplashBinding(),
       transition: Transition.fadeIn,
     ),
-
+/*
     ///This handles the call of the OnBoardingPage
     GetPage(
       name: RouteName.OnBoardingPage,
@@ -33,7 +33,7 @@ class AppPages {
       ],
       transition: Transition.rightToLeftWithFade,
     ),
-
+*/
     ///This handles the call of the ApplicationPage
     GetPage(
       name: RouteName.ApplicationPage,

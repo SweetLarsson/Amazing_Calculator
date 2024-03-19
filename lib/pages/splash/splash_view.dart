@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:amazing_calculator/resources/images.dart';
+import 'package:amazing_calculator/resources/strings.dart';
 import 'package:amazing_calculator/widgets/background.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,10 +12,12 @@ class SplashPage extends GetView<SplashController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      backgroundColor: Colors.black,
       body: Stack(
         children: [
-          const Background(),
+          Background(),
+          /*
           BackdropFilter(
             filter: ImageFilter.blur(
               sigmaX: 11,
@@ -23,36 +27,12 @@ class SplashPage extends GetView<SplashController> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    size: 145,
-                    Icons.calculate,
-                    shadows: [
-                      Shadow(
-                        color: Colors.white70,
-                        blurRadius: 2,
-                        offset: Offset(2, 5),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    'Kalkulet',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black87,
-                          blurRadius: 2,
-                          offset: Offset(2, 5),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+
+                  ],
               ),
             ),
           ),
+          */
         ],
       ),
     );

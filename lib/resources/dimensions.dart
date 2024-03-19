@@ -43,8 +43,11 @@ class MyDimensions {
   static const double d65 = 65.0;
   static const double d68 = 68.0;
   static const double d70 = 70.0;
+  static const double d75 = 75.0;
   static const double d80 = 80.0;
+  static const double d85 = 85.0;
   static const double d90 = 90.0;
+  static const double d95 = 95.0;
   static const double d100 = 100.0;
   static const double d110 = 110.0;
   static const double d120 = 120.0;
@@ -71,6 +74,14 @@ class MyDimensions {
   static const double d300 = 300.0;
   static const double d350 = 350.0;
   static const double d400 = 400.0;
+  static const double d410 = 410.0;
+  static const double d420 = 420.0;
+  static const double d430 = 430.0;
+  static const double d440 = 440.0;
   static const double d450 = 450.0;
+  static const double d460 = 460.0;
+  static const double d470 = 470.0;
+  static const double d480 = 480.0;
+  static const double d490 = 490.0;
   static const double d500 = 500.0;
 }

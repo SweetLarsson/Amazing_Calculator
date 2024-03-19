@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Amazing Calculator',
+      title: 'Calculator Amazing',
       debugShowCheckedModeBanner: false,
       getPages: AppPages.Routes,
       initialRoute: AppPages.Splash,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
       ),
     );

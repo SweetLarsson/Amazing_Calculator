@@ -1,3 +1,4 @@
+import 'package:amazing_calculator/resources/images.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
@@ -8,11 +9,10 @@ class Background extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/blue_background.png'),
+          image: AssetImage(larsZ),
           fit: BoxFit.cover,
         ),
       ),
-
     );
   }
 }
