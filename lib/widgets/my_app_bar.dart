@@ -1,5 +1,5 @@
+import 'package:amazing_calculator/resources/strings.dart';
 import 'package:flutter/material.dart';
-
 import '../resources/dimensions.dart';
 
 class MyAppBar extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      actions:  const [
+      actions: const [
         Padding(
           padding: EdgeInsets.only(right: MyDimensions.d24),
           child: IconButton(
@@ -22,10 +22,7 @@ class MyAppBar extends StatelessWidget {
         ),
       ],
       backgroundColor: Colors.black87,
-      title:  Text(
-        'Standard',
-        style: TextStyle(color: Colors.white),
-      ),
+      title: const Text(std),
     );
   }
 }

@@ -13,6 +13,11 @@ const IconData abtIcon = Icons.error_outline_rounded;
 //AppBar
 const IconData daylight = Icons.sunny;
 const IconData night = Icons.nights_stay;
+const IconData setting = Icons.settings_outlined;
+const IconData share = Icons.share_outlined;
+const IconData shutDown = Icons.power_settings_new_sharp;
+
+
 
 //Drawer Calculator Icons
 const IconData stdIcon = Icons.calculate_outlined;

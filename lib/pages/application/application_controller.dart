@@ -1,6 +1,9 @@
+import 'package:amazing_calculator/Routes/RouteName.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../data/menu_items.dart';
+import '../../models/menu_items.dart';
 import '../../resources/icons.dart';
 import '../../resources/strings.dart';
 import '../../widgets/my_list_tile.dart';
@@ -13,7 +16,15 @@ class ApplicationController extends GetxController {
   ///Day and Night theme
   var dayNightTheme = 0.obs;
 
-  ///Declarations
+  ///OnMenu Item Selection
+  Future<void> onSelected(BuildContext context, MenuItem item) async {
+    switch (item) {
+      case MenuItems.itemSettings:
+        Get.offAndToNamed(RouteName.HistoryPage);
+    }
+  }
+
+  ///Functionality Declarations
   String output = '0';
   String _out = '0';
   double num1 = 0.0;
@@ -28,12 +39,11 @@ class ApplicationController extends GetxController {
       double num1 = 0.0;
       double num2 = 0.0;
       operand = '0';
-    }else if (val == '+' || val == '-' ||val == 'x' ||val == '/'){
+    } else if (val == '+' || val == '-' || val == 'x' || val == '/') {
       num1 = double.parse(output);
       operand = val;
       _out = '0';
       output = output + val;
-
     }
   }
 
@@ -123,28 +133,27 @@ class ApplicationController extends GetxController {
         dense: true,
         leadingIcon: lenIcon,
       ),
-      /*
-                  ///weight and mass selection
-                  MyListTile(
-                    label: wei,
-                    dense: true,
-                    leadingIcon: weiIcon,
-                  ),
 
-                  ///temperature selection
-                  MyListTile(
-                    label: tem,
-                    dense: true,
-                    leadingIcon: temIcon,
-                  ),
+      ///weight and mass selection
+      const MyListTile(
+        label: wei,
+        dense: true,
+        leadingIcon: weiIcon,
+      ),
 
-                  ///energy selection
-                  MyListTile(
-                    label: ene,
-                    dense: true,
-                    leadingIcon: eneIcon,
-                  ),
-                            */
+      ///temperature selection
+      const MyListTile(
+        label: tem,
+        dense: true,
+        leadingIcon: temIcon,
+      ),
+
+      ///energy selection
+      const MyListTile(
+        label: ene,
+        dense: true,
+        leadingIcon: eneIcon,
+      ),
 
       ///area selection
       const MyListTile(
@@ -166,28 +175,27 @@ class ApplicationController extends GetxController {
         dense: true,
         leadingIcon: timIcon,
       ),
-      /*
-                  ///power selection
-                  MyListTile(
-                    label: pow,
-                    dense: true,
-                    leadingIcon: powIcon,
-                  ),
 
-                  ///data selection
-                  MyListTile(
-                    label: data,
-                    dense: true,
-                    leadingIcon: datIcon,
-                  ),
+      ///power selection
+      const MyListTile(
+        label: pow,
+        dense: true,
+        leadingIcon: powIcon,
+      ),
 
-                  ///pressure selection
-                  MyListTile(
-                    label: pres,
-                    dense: true,
-                    leadingIcon: presIcon,
-                  ),
-                            */
+      ///data selection
+      const MyListTile(
+        label: data,
+        dense: true,
+        leadingIcon: datIcon,
+      ),
+
+      ///pressure selection
+      const MyListTile(
+        label: pres,
+        dense: true,
+        leadingIcon: presIcon,
+      ),
 
       ///angle selection
       const MyListTile(

@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class NavBackground extends StatelessWidget {
-  const NavBackground({super.key});
+class TransparentBackground extends StatelessWidget {
+  const TransparentBackground({super.key});
 
   @override
   Widget build(BuildContext context) {

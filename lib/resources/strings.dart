@@ -14,6 +14,13 @@ const String welcomeNote = 'Welcome';
 const String loading = 'Please wait...';
 const String abt = 'About';
 
+//Menu Button
+const String setting = 'Setting';
+const String shutDown = 'Shut Down';
+const String theme = 'Theme';
+const String note = 'Notepad';
+const String share = 'Share';
+
 //Calculator SubHeads
 const String calc = 'Calculator';
 const String conv = 'Converter';

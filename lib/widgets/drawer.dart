@@ -1,6 +1,6 @@
 import 'package:amazing_calculator/resources/strings.dart';
 import 'package:amazing_calculator/widgets/my_list_tile.dart';
-import 'package:amazing_calculator/widgets/nav_background.dart';
+import 'package:amazing_calculator/widgets/transparent_background.dart';
 import 'package:flutter/material.dart';
 import '../resources/dimensions.dart';
 import '../resources/icons.dart';
@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
         child: SingleChildScrollView(
           child: Stack(
             children: [
-              NavBackground(),
+              TransparentBackground(),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -34,7 +34,7 @@ class MyDrawer extends StatelessWidget {
                           calc,
                           style: TextStyle(
                             color: Colors.amber,
-                            fontSize: MyDimensions.d30,
+                            fontSize: MyDimensions.d20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -74,7 +74,7 @@ class MyDrawer extends StatelessWidget {
                           conv,
                           style: TextStyle(
                             color: Colors.amber,
-                            fontSize: MyDimensions.d30,
+                            fontSize: MyDimensions.d20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

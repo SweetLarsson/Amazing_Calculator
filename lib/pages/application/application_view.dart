@@ -1,10 +1,12 @@
+import 'package:amazing_calculator/data/menu_items.dart';
+import 'package:amazing_calculator/models/menu_items.dart';
 import 'package:amazing_calculator/resources/colors.dart';
 import 'package:amazing_calculator/widgets/my_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../Routes/RouteName.dart';
 import '../../resources/dimensions.dart';
-import '../../resources/icons.dart';
+import '../../resources/strings.dart';
 import '../../widgets/drawer.dart';
 import 'application_controller.dart';
 import 'application_index.dart';
@@ -14,6 +16,27 @@ class ApplicationPage extends GetView<ApplicationController> {
 
   @override
   Widget build(BuildContext context) {
+    ///Menu Protocol
+    PopupMenuItem<MenuItem> buildItem(MenuItem item) => PopupMenuItem<MenuItem>(
+          value: item,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                item.label,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              Icon(
+                item.icon,
+                color: Colors.black,
+              ),
+            ],
+          ),
+        );
+
     return Scaffold(
       backgroundColor: MyColors.black,
 
@@ -24,24 +47,34 @@ class ApplicationPage extends GetView<ApplicationController> {
       appBar: AppBar(
         elevation: 0,
         actions: [
-          Padding(
-            padding: EdgeInsets.only(right: MyDimensions.d12),
-            child: IconButton(
-              onPressed: () {
-                controller.dayNightTheme.value !=
-                    controller.dayNightTheme.value;
-              },
-              icon: Icon(
-                daylight,
-                color: Colors.white,
-              ),
-            ),
+          PopupMenuButton<MenuItem>(
+            color: Colors.white54,
+            onSelected: (item) => onSelected(context, item),
+            itemBuilder: (context) => [
+              ...MenuItems.itemsFirst.map((buildItem)),
+              const PopupMenuDivider(),
+              ...MenuItems.itemsSecond.map((buildItem)),
+            ],
           ),
         ],
         backgroundColor: Colors.black87,
-        title: const Text(
-          'Standard',
-          style: TextStyle(color: Colors.white),
+        title: const ListTile(
+          title:  Text(
+            'Hello,',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          subtitle: Text(
+            "You're currently using $std Calculator",
+            softWrap: true,
+            style: TextStyle(
+                color: Colors.white54,
+                fontStyle: FontStyle.italic,
+                fontSize: MyDimensions.d12),
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ),
 
@@ -82,11 +115,11 @@ class ApplicationPage extends GetView<ApplicationController> {
 
             ///Keypad and operands
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: MyDimensions.d5),
+              padding: const EdgeInsets.symmetric(horizontal: MyDimensions.d5),
               child: Column(
                 children: [
                   //Row one
-                  Row(
+                  const Row(
                     children: [
                       MyButton(
                         label: 'C',
@@ -123,19 +156,19 @@ class ApplicationPage extends GetView<ApplicationController> {
                         onTap: () => controller.keypadOnPressed,
                         bgColor: Colors.white10,
                       ),
-                      MyButton(
+                      const MyButton(
                         label: '8',
                         labelColor: Colors.white,
                         onTap: null,
                         bgColor: Colors.white10,
                       ),
-                      MyButton(
+                      const MyButton(
                         label: '9',
                         labelColor: Colors.white,
                         onTap: null,
                         bgColor: Colors.white10,
                       ),
-                      MyButton(
+                      const MyButton(
                         label: '/',
                         labelColor: Colors.amber,
                         onTap: null,
@@ -144,7 +177,7 @@ class ApplicationPage extends GetView<ApplicationController> {
                     ],
                   ),
                   //Row four
-                  Row(
+                  const Row(
                     children: [
                       MyButton(
                         label: '4',
@@ -174,7 +207,7 @@ class ApplicationPage extends GetView<ApplicationController> {
                   ),
 
                   //Row five
-                  Row(
+                  const Row(
                     children: [
                       MyButton(
                         label: '1',
@@ -204,7 +237,7 @@ class ApplicationPage extends GetView<ApplicationController> {
                   ),
 
                   //Row six
-                  Row(
+                  const Row(
                     children: [
                       MyButton(
                         label: '00',
@@ -239,5 +272,16 @@ class ApplicationPage extends GetView<ApplicationController> {
         ),
       ),
     );
+  }
+
+  /// OnMenu Item Selection
+  Future<void> onSelected(BuildContext context, MenuItem item) async {
+    switch (item) {
+      case MenuItems.itemSettings:
+        Get.offAndToNamed(RouteName.Splash);
+        break;
+      case MenuItems.itemShare:
+        Get.offAndToNamed(RouteName.Splash);
+    }
   }
 }

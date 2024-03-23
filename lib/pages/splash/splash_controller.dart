@@ -16,7 +16,7 @@ class SplashController extends GetxController {
   }
 
   Future<void> LoadingTime() async {
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 1), () {
       Get.offAndToNamed(RouteName.ApplicationPage);
     });
   }
