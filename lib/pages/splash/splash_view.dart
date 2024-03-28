@@ -1,7 +1,4 @@
-import 'dart:ui';
 
-import 'package:amazing_calculator/resources/images.dart';
-import 'package:amazing_calculator/resources/strings.dart';
 import 'package:amazing_calculator/widgets/background.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

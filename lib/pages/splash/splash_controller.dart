@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 
-import '../../Routes/RouteName.dart';
+import '../../routes/app_route_name.dart';
 import 'splash_index.dart';
 
 class SplashController extends GetxController {
@@ -12,12 +12,12 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    LoadingTime();
+    loadingTime();
   }
 
-  Future<void> LoadingTime() async {
+  Future<void> loadingTime() async {
     Timer(const Duration(seconds: 1), () {
-      Get.offAndToNamed(RouteName.ApplicationPage);
+      Get.offAndToNamed(AppRouteName.applicationPage);
     });
   }
 

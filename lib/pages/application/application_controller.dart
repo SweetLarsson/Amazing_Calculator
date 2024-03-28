@@ -1,11 +1,11 @@
-import 'package:amazing_calculator/Routes/RouteName.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/menu_items.dart';
+import '../../data/menu_item.dart';
 import '../../models/menu_items.dart';
 import '../../resources/icons.dart';
 import '../../resources/strings.dart';
+import '../../routes/app_route_name.dart';
 import '../../widgets/my_list_tile.dart';
 import 'application_state.dart';
 
@@ -16,13 +16,13 @@ class ApplicationController extends GetxController {
   ///Day and Night theme
   var isDark = false;
 
-  void changeTheme(state) {
+  Future<void> changeMyTheme(state)  async {
     if (state == true) {
       isDark = true;
-      Get.changeTheme(ThemeData.dark());
+      Get.changeTheme(ThemeData.light());
     } else {
       isDark = false;
-      Get.changeTheme(ThemeData.light());
+      Get.changeTheme(ThemeData.dark());
     }
     update();
   }
@@ -31,7 +31,7 @@ class ApplicationController extends GetxController {
   Future<void> onSelected(BuildContext context, MenuItem item) async {
     switch (item) {
       case MenuItems.itemSettings:
-        Get.offAndToNamed(RouteName.HistoryPage);
+        Get.offAndToNamed(AppRouteName.historyPage);
     }
   }
 

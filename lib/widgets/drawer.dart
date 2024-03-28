@@ -11,7 +11,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child:  Drawer(
+      child: Drawer(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.zero),
         ),
@@ -33,137 +33,137 @@ class MyDrawer extends StatelessWidget {
                         title: Text(
                           calc,
                           style: TextStyle(
-                            color: Colors.amber,
+                            color: Colors.white,
                             fontSize: MyDimensions.d20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-      
+
                       ///standard selection
                       MyListTile(
                         label: std,
                         dense: true,
                         leadingIcon: stdIcon,
                       ),
-      
+
                       ///scientific selection
                       MyListTile(
                         label: sci,
                         dense: true,
                         leadingIcon: sciIcon,
                       ),
-      
+
                       ///programmer selection
                       MyListTile(
                         label: pro,
                         dense: true,
                         leadingIcon: proIcon,
                       ),
-      
+
                       ///date selection
                       MyListTile(
                         label: date,
                         dense: true,
                         leadingIcon: dateIcon,
                       ),
-      
+
                       //Converter Sub-head
                       ListTile(
                         title: Text(
                           conv,
                           style: TextStyle(
-                            color: Colors.amber,
+                            color: Colors.white,
                             fontSize: MyDimensions.d20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-      
+
                       ///currency selection
                       MyListTile(
                         label: cur,
                         dense: true,
                         leadingIcon: curIcon,
                       ),
-      
+
                       ///volume selection
                       MyListTile(
                         label: vol,
                         dense: true,
                         leadingIcon: volIcon,
                       ),
-      
+
                       ///length selection
                       MyListTile(
                         label: len,
                         dense: true,
                         leadingIcon: lenIcon,
                       ),
-      
+
                       ///weight and mass selection
                       MyListTile(
                         label: wei,
                         dense: true,
                         leadingIcon: weiIcon,
                       ),
-      
+
                       ///temperature selection
                       MyListTile(
                         label: tem,
                         dense: true,
                         leadingIcon: temIcon,
                       ),
-      
+
                       ///energy selection
                       MyListTile(
                         label: ene,
                         dense: true,
                         leadingIcon: eneIcon,
                       ),
-      
+
                       ///area selection
                       MyListTile(
                         label: are,
                         dense: true,
                         leadingIcon: areIcon,
                       ),
-      
+
                       ///speed selection
                       MyListTile(
                         label: spe,
                         dense: true,
                         leadingIcon: speIcon,
                       ),
-      
+
                       ///time selection
                       MyListTile(
                         label: tim,
                         dense: true,
                         leadingIcon: timIcon,
                       ),
-      
+
                       ///power selection
                       MyListTile(
                         label: pow,
                         dense: true,
                         leadingIcon: powIcon,
                       ),
-      
+
                       ///data selection
                       MyListTile(
                         label: data,
                         dense: true,
                         leadingIcon: datIcon,
                       ),
-      
+
                       ///pressure selection
                       MyListTile(
                         label: pres,
                         dense: true,
                         leadingIcon: presIcon,
                       ),
-      
+
                       ///angle selection
                       MyListTile(
                         label: ang,
@@ -172,16 +172,13 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ],
                   ),
-      
+
                   ///Bottom Nav
                   ///About Application
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: MyDimensions.d15),
-                    child: MyListTile(
-                      label: abt,
-                      dense: true,
-                      leadingIcon: abtIcon,
-                    ),
+                  MyListTile(
+                    label: abt,
+                    dense: true,
+                    leadingIcon: abtIcon,
                   ),
                 ],
               ),

@@ -1,4 +1,4 @@
-library ApplicationPage;
+library application_page;
 
 export './application_binding.dart';
 export './application_controller.dart';

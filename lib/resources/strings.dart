@@ -1,7 +1,7 @@
 ///Entire Application Reusable Text
 ///Application String Detail
 const String forgotPass = 'Forgot Password';
-const String mainName = 'Beautiful Login';
+const String appName = 'Calculator Amazing';
 const String loginButton = 'Login';
 const String accountAlready = 'Already have an account.';
 const String yetToSignUp = 'I want to create an account.';
@@ -13,6 +13,8 @@ const String name = 'Username';
 const String welcomeNote = 'Welcome';
 const String loading = 'Please wait...';
 const String abt = 'About';
+const String hello = 'Hello Larsson,';
+const String appNote = 'You are currently using the $std $calc';
 
 //Menu Button
 const String setting = 'Setting';

@@ -4,14 +4,21 @@ class MyDimensions {
   static const double d1 = 1.0;
   static const double d1_5 = 1.5;
   static const double d2 = 2.0;
+  static const double d2_5 = 2.5;
   static const double d3 = 3.0;
+  static const double d3_5 = 3.5;
   static const double d4 = 4.0;
+  static const double d4_5 = 4.5;
   static const double d5 = 5.0;
   static const double d5_5 = 5.5;
   static const double d6 = 6.0;
+  static const double d6_5 = 6.5;
   static const double d7 = 7.0;
+  static const double d7_5 = 7.5;
   static const double d8 = 8.0;
+  static const double d8_5 = 8.5;
   static const double d9 = 9.0;
+  static const double d9_5 = 9.5;
   static const double d10 = 10.0;
   static const double d12 = 12.0;
   static const double d14 = 14.0;
@@ -84,4 +91,14 @@ class MyDimensions {
   static const double d480 = 480.0;
   static const double d490 = 490.0;
   static const double d500 = 500.0;
+  static const double d550 = 550.0;
+  static const double d600 = 600.0;
+  static const double d650 = 650.0;
+  static const double d700 = 700.0;
+  static const double d750 = 750.0;
+  static const double d800 = 800.0;
+  static const double d850 = 850.0;
+  static const double d900 = 900.0;
+  static const double d950 = 950.0;
+  static const double d1000 = 1000.0;
 }

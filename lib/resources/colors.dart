@@ -52,10 +52,6 @@ class MyColors {
   static Color darkSlateGray = HexColor.fromHex('#2F4F4F');
   static Color black = HexColor.fromHex('#000000');
   static Color blackTrans10 = HexColor.fromHex('#000000');
-  static Color blackTrans20 = HexColor.fromHex('#000000');
-  static Color blackTrans50 = HexColor.fromHex('#000000');
-  static Color blackTrans70 = HexColor.fromHex('#000000');
-  static Color blackTrans85 = HexColor.fromHex('#000000');
 
   /// BROWN COLOR NAMES
   static Color cornSilk = HexColor.fromHex('#FFF8DC');
@@ -167,8 +163,27 @@ class MyColors {
   static Color navy = HexColor.fromHex('#000080');
   static Color midnightBlue = HexColor.fromHex('#191970');
 
-  //With Opacity
-  static Color kingKong = Colors.black.withOpacity(0.4);
+  //black with Opacity
+  static Color black10 = Colors.black.withOpacity(0.1);
+  static Color black20 = Colors.black.withOpacity(0.2);
+  static Color black30 = Colors.black.withOpacity(0.3);
+  static Color black40 = Colors.black.withOpacity(0.4);
+  static Color black50 = Colors.black.withOpacity(0.5);
+  static Color black60 = Colors.black.withOpacity(0.6);
+  static Color black70 = Colors.black.withOpacity(0.7);
+  static Color black80 = Colors.black.withOpacity(0.8);
+  static Color black90 = Colors.black.withOpacity(0.9);
+
+  //white with Opacity
+  static Color white010 = Colors.white.withOpacity(0.1);
+  static Color white20 = Colors.white.withOpacity(0.2);
+  static Color white30 = Colors.white.withOpacity(0.3);
+  static Color white40 = Colors.white.withOpacity(0.4);
+  static Color white50 = Colors.white.withOpacity(0.5);
+  static Color white60 = Colors.white.withOpacity(0.6);
+  static Color white70 = Colors.white.withOpacity(0.7);
+  static Color white80 = Colors.white.withOpacity(0.8);
+  static Color white90 = Colors.white.withOpacity(0.9);
 }
 
 ///Connect
@@ -176,12 +191,10 @@ extension HexColor on Color {
   static Color fromHex(String hexColorString) {
     hexColorString = hexColorString.replaceAll('#', '');
     if (hexColorString.length == 6) {
-      hexColorString = 'FF' + hexColorString; // 8 Char with opacity 100%
+      hexColorString = 'FF$hexColorString'; // 8 Char with opacity 100%
     }
     return Color(
       int.parse(hexColorString, radix: 16),
     );
   }
 }
-
-

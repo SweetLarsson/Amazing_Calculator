@@ -1,26 +1,21 @@
-
-
-
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../pages/application/application_index.dart';
 import '../pages/splash/splash_index.dart';
-import 'RouteName.dart';
+import 'app_route_name.dart';
 
 /// Responsible for the entire application pages
 class AppPages {
-  static const splash = RouteName.splash;
-  static const application = RouteName.applicationPage;
+  static const splash = AppRouteName.splash;
+  static const application = AppRouteName.applicationPage;
   static final RouteObserver<Route> observer = RouteObserver();
   static List<String> history = [];
 
   static final List<GetPage> routes = [
     ///This handles the call of the first page
     GetPage(
-      name: RouteName.splash,
+      name: AppRouteName.splash,
       page: () => const SplashPage(),
       binding: SplashBinding(),
       transition: Transition.fadeIn,
@@ -28,7 +23,7 @@ class AppPages {
 /*
     ///This handles the call of the OnBoardingPage
     GetPage(
-      name: RouteName.OnBoardingPage,
+      name: AppRouteName.OnBoardingPage,
       page: () => const OnBoardingPage(),
       binding: OnBoardingBinding(),
       middlewares: [
@@ -37,15 +32,16 @@ class AppPages {
       transition: Transition.rightToLeftWithFade,
     ),
 */
+
     ///This handles the call of the ApplicationPage
     GetPage(
-      name: RouteName.applicationPage,
+      name: AppRouteName.applicationPage,
       page: () => const ApplicationPage(),
       binding: ApplicationBinding(),
     ),
     /*
     GetPage(
-      name: RouteName.SettingPage,
+      name: AppRouteName.SettingPage,
       page: () => const SettingPage(),
       binding: SettingPage(),
     ),
@@ -53,14 +49,14 @@ class AppPages {
 /*
     ///This handles the call of the first page
     GetPage(
-      name: RouteName.HistoryPage,
+      name: AppRouteName.HistoryPage,
       page: () => const HistoryPage(),
       binding: HistoryBinding(),
     ),
 
     ///This handles the call of the ChatPage
     GetPage(
-      name: RouteName.ChatPage,
+      name: AppRouteName.ChatPage,
       page: () => const ChatPage(),
       binding: ChatPageBinding(),
     ),

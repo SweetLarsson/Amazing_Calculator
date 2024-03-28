@@ -5,5 +5,6 @@ import 'package:get/get.dart';
 
 class SplashState {
   var index = 0.obs;
-//obs makes a variable observable or reactive, checks when the variable changes...
+//obs makes a variable observable or reactive,
+// checks when the variable changes state ...
 }

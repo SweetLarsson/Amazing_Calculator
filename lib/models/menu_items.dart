@@ -2,7 +2,7 @@ import 'package:amazing_calculator/resources/strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../data/menu_items.dart';
+import '../data/menu_item.dart';
 
 class MenuItems {
   /// first item on the menu
