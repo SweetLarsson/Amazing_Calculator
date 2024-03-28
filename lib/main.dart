@@ -17,10 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: AppPages.Routes,
       initialRoute: AppPages.Splash,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(primarySwatch: Colors.green),
     );
   }
 }

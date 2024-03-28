@@ -4,6 +4,7 @@ import 'package:amazing_calculator/resources/colors.dart';
 import 'package:amazing_calculator/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import '../../Routes/RouteName.dart';
 import '../../resources/dimensions.dart';
 import '../../resources/strings.dart';
@@ -17,7 +18,8 @@ class ApplicationPage extends GetView<ApplicationController> {
   @override
   Widget build(BuildContext context) {
     ///Menu Protocol
-    PopupMenuItem<MenuItem> buildItem(MenuItem item) => PopupMenuItem<MenuItem>(
+    PopupMenuItem<MenuItem> buildItem(MenuItem item) =>
+        PopupMenuItem<MenuItem>(
           value: item,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,6 +49,14 @@ class ApplicationPage extends GetView<ApplicationController> {
       appBar: AppBar(
         elevation: 0,
         actions: [
+          GetBuilder<ApplicationController>(
+            builder: (_) => Switch(
+                value: controller.isDark,
+                onChanged: (state) {
+                  print('The switch is selected');
+                  controller.changeTheme(state);
+                }),
+          ),
           PopupMenuButton<MenuItem>(
             color: Colors.white54,
             onSelected: (item) => onSelected(context, item),
@@ -59,7 +69,7 @@ class ApplicationPage extends GetView<ApplicationController> {
         ],
         backgroundColor: Colors.black87,
         title: const ListTile(
-          title:  Text(
+          title: Text(
             'Hello,',
             style: TextStyle(
               color: Colors.white,

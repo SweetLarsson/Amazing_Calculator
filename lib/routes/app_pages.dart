@@ -1,3 +1,8 @@
+
+
+
+
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,15 +12,15 @@ import 'RouteName.dart';
 
 /// Responsible for the entire application pages
 class AppPages {
-  static const Splash = RouteName.Splash;
-  static const Application = RouteName.ApplicationPage;
+  static const splash = RouteName.splash;
+  static const application = RouteName.applicationPage;
   static final RouteObserver<Route> observer = RouteObserver();
   static List<String> history = [];
 
-  static final List<GetPage> Routes = [
+  static final List<GetPage> routes = [
     ///This handles the call of the first page
     GetPage(
-      name: RouteName.Splash,
+      name: RouteName.splash,
       page: () => const SplashPage(),
       binding: SplashBinding(),
       transition: Transition.fadeIn,
@@ -34,7 +39,7 @@ class AppPages {
 */
     ///This handles the call of the ApplicationPage
     GetPage(
-      name: RouteName.ApplicationPage,
+      name: RouteName.applicationPage,
       page: () => const ApplicationPage(),
       binding: ApplicationBinding(),
     ),

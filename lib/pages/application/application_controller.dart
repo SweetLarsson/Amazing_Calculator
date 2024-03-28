@@ -14,7 +14,18 @@ class ApplicationController extends GetxController {
   final state = ApplicationState();
 
   ///Day and Night theme
-  var dayNightTheme = 0.obs;
+  var isDark = false;
+
+  void changeTheme(state) {
+    if (state == true) {
+      isDark = true;
+      Get.changeTheme(ThemeData.dark());
+    } else {
+      isDark = false;
+      Get.changeTheme(ThemeData.light());
+    }
+    update();
+  }
 
   ///OnMenu Item Selection
   Future<void> onSelected(BuildContext context, MenuItem item) async {
